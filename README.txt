@@ -26,6 +26,18 @@ https://github.com/maxbane/cascadilla.cls
 Special thanks to Jonathan Brindle for helping to resolve some glitches in
 previous versions.
 
+TO USE:
+
+Simply place cascadilla.cls and cascadilla.bst in the same directory as the
+paper you are writing, and use "\documentclass{cascadilla}" instead of
+"\documentclass{article}". See the example paper (example.tex) for more details
+of usage.
+
+To make cascadilla.cls and cascadilla.bst available for all of your papers,
+without having to put separate copies in the directory of each, consult your
+LaTeX distribution's documentation to find out where to place them so that they
+are globally available. This is usually somewhere in your "texmf" tree.
+
 VERSION HISTORY
 
 Version 1.6
