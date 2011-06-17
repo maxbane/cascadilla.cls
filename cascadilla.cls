@@ -1,6 +1,6 @@
 %% cascadilla.cls
 %% Copyright 2008-2011 Max Bane
-%% Version 1.6.1
+%% Version 1.7
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -26,6 +26,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Changes:
+% Version 1.7: Added "a4paper" option for typsetting on A4 paper, which is
+% allowed by the Cascadilla stylesheet with particular margin settings.
 % Version 1.6.1: Fixed compile bug caused by ill-formed date string in
 % \ProvidesClass.
 % Version 1.6: Redefined \thanks command once more, to conform with the new
@@ -47,7 +49,7 @@
 % Identification
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cascadilla}[2010/12/13 v1.6.1 Class for Cascadilla Proceedings
+\ProvidesClass{cascadilla}[2011/06/17 v1.7 Class for Cascadilla Proceedings
 Project articles, by Max Bane]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,11 +64,13 @@ Project articles, by Max Bane]
 \setboolean{nopagenums}{true}
 \newboolean{times}
 \setboolean{times}{true}
+\newboolean{a4paper}
 
 \DeclareOption{hyphenate}{\setboolean{hyphenate}{true}}
 \DeclareOption{nocopyright}{\setboolean{copyright}{false}}
 \DeclareOption{pagenums}{\setboolean{nopagenums}{false}}
 \DeclareOption{notimes}{\setboolean{times}{false}}
+\DeclareOption{a4paper}{\setboolean{a4paper}{true}}
 
 \ProcessOptions \relax
 
@@ -76,10 +80,19 @@ Project articles, by Max Bane]
 % We're just an extension of the built-in article class.
 % The Cascadilla stylesheet requires US Letter paper and 10pt body fontsize
 % (which is happily LaTeX's default fontsize)
-\LoadClass[letterpaper]{article} 
+% Update (version 1.7): the Cascadilla stylesheet now admits A4 paper, with
+% different margins; check for the "a4paper" option before loading the article
+% class and setting the margins.
+\ifthenelse{\boolean{a4paper}}{
+    \LoadClass[a4paper]{article} 
+    % Set up the margin widths/heights using the geometry package
+    \RequirePackage[a4paper,left=3.15cm,right=3.15cm,top=2.54cm,bottom=4.29cm,foot=0.75in]{geometry}
+}{
+    \LoadClass[letterpaper]{article} 
+    % Set up the margin widths/heights using the geometry package
+    \RequirePackage[letterpaper,left=1.38in,right=1.38in,top=1.0in,bottom=1.0in,foot=0.75in]{geometry}
+}
 
-% Set up the margin widths/heights using the geometry package
-\RequirePackage[letterpaper,left=1.38in,right=1.38in,top=1.0in,bottom=1.0in,foot=0.75in]{geometry}
 
 % Stylesheet requires Times Roman font
 \ifthenelse{\boolean{times}}{

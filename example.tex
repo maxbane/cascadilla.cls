@@ -30,8 +30,15 @@
 % normal LaTeX end-of-line hyphenation. You can also give "pagenums" to
 % generate page numbers (contrary to the Cascadilla stylesheet); page numbers
 % start on the second page if the copyright notice is present on the first
-% page.
+% page. You may also give "notimes" to generate a document without the Times New
+% Roman font required by the Cascadilla stylesheet---your system's default font
+% (most likely Computer Modern) will be used instead, or anything else that you
+% specify manually. Finally, you can also use "a4paper" to generate a document
+% on A4 sized paper instead of the default US Letter; the Cascadilla stylesheet
+% makes allowance for this, with different margin requirements, which will be
+% applied automatically.
 %\documentclass[nocopyright,hyphenate,pagenums]{cascadilla}
+%\documentclass[a4paper]{cascadilla}
 
 % Include any \usepackage statements you might need here.
 

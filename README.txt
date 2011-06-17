@@ -40,6 +40,13 @@ are globally available. This is usually somewhere in your "texmf" tree.
 
 VERSION HISTORY
 
+Version 1.7: 
+    Added "a4paper" option for typsetting on A4 paper, which is allowed by the
+Cascadilla stylesheet with particular margin settings.
+
+Version 1.6.1: 
+    Fixed compile bug caused by ill-formed date string in \ProvidesClass.
+
 Version 1.6
     Redefined \thanks command once more, to conform with the new requirement for
 an "invisible asterisk".
