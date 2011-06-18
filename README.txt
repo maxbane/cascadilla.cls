@@ -40,7 +40,11 @@ are globally available. This is usually somewhere in your "texmf" tree.
 
 VERSION HISTORY
 
-Version 1.7: 
+Version 1.7.1 (Jun 18, 2011):
+    Added commented example of listing multiple authors/institutions to
+example.tex.
+
+Version 1.7 (Jun 17, 2011): 
     Added "a4paper" option for typsetting on A4 paper, which is allowed by the
 Cascadilla stylesheet with particular margin settings.
 

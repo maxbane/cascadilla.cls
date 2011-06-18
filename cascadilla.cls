@@ -1,6 +1,6 @@
 %% cascadilla.cls
 %% Copyright 2008-2011 Max Bane
-%% Version 1.7
+%% Version 1.7.1
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -26,6 +26,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Changes:
+% Version 1.7.1: Added commented example of listing multiple
+% authors/institutions to example.tex.
 % Version 1.7: Added "a4paper" option for typsetting on A4 paper, which is
 % allowed by the Cascadilla stylesheet with particular margin settings.
 % Version 1.6.1: Fixed compile bug caused by ill-formed date string in
@@ -49,7 +51,7 @@
 % Identification
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cascadilla}[2011/06/17 v1.7 Class for Cascadilla Proceedings
+\ProvidesClass{cascadilla}[2011/06/18 v1.7.1 Class for Cascadilla Proceedings
 Project articles, by Max Bane]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
