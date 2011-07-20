@@ -1,6 +1,6 @@
 %% cascadilla.cls
 %% Copyright 2008-2011 Max Bane
-%% Version 1.7.1
+%% Version 1.8
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -26,6 +26,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Changes:
+% Version 1.8: Added author's signature statement at the top of the first page,
+% and the "nosignature" option to suppress it.
 % Version 1.7.1: Added commented example of listing multiple
 % authors/institutions to example.tex.
 % Version 1.7: Added "a4paper" option for typsetting on A4 paper, which is
@@ -51,7 +53,7 @@
 % Identification
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cascadilla}[2011/06/18 v1.7.1 Class for Cascadilla Proceedings
+\ProvidesClass{cascadilla}[2011/07/20 v1.8 Class for Cascadilla Proceedings
 Project articles, by Max Bane]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -67,12 +69,15 @@ Project articles, by Max Bane]
 \newboolean{times}
 \setboolean{times}{true}
 \newboolean{a4paper}
+\newboolean{signature}
+\setboolean{signature}{true}
 
 \DeclareOption{hyphenate}{\setboolean{hyphenate}{true}}
 \DeclareOption{nocopyright}{\setboolean{copyright}{false}}
 \DeclareOption{pagenums}{\setboolean{nopagenums}{false}}
 \DeclareOption{notimes}{\setboolean{times}{false}}
 \DeclareOption{a4paper}{\setboolean{a4paper}{true}}
+\DeclareOption{nosignature}{\setboolean{signature}{false}}
 
 \ProcessOptions \relax
 
@@ -142,6 +147,15 @@ Project articles, by Max Bane]
 %% Redefine \maketitle to conform to cascadilla stylesheet
 \renewcommand{\maketitle}{%
     \begin{center}
+        \ifthenelse{\boolean{signature}}{
+            \normalsize
+            \selectfont
+            This printout has been approved by me, the author. Any mistakes in
+this printout will not be fixed by the publisher. Here is my signature and the
+date:
+\underline{\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad}\\
+            \blankline\\
+        }{\blankline\\\blankline\\\blankline\\}
         \ifthenelse{\boolean{haveTitle}}{
             \fontsize{18}{18}
             \selectfont
