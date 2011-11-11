@@ -126,7 +126,7 @@ Project articles, by Max Bane]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main Definitions
 
-\newcommand{\blankline}{\quad\pagebreak[2]}
+\newcommand{\blankline}{\quad\\}
 
 % Booleans for whether various strings have been set
 \newboolean{haveAuthor}
@@ -154,8 +154,8 @@ Project articles, by Max Bane]
 this printout will not be fixed by the publisher. Here is my signature and the
 date:
 \underline{\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad}\\
-            \blankline\\
-        }{\blankline\\\blankline\\\blankline\\}
+            \blankline
+        }{\blankline\blankline\blankline}
         \ifthenelse{\boolean{haveTitle}}{
             \fontsize{18}{18}
             \selectfont
