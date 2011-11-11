@@ -40,6 +40,10 @@ are globally available. This is usually somewhere in your "texmf" tree.
 
 VERSION HISTORY
 
+Version 1.8 (Jul 20, 2011): 
+    Added author's signature statement at the top of the first page,
+and the "nosignature" option to suppress it.
+
 Version 1.7.1 (Jun 18, 2011):
     Added commented example of listing multiple authors/institutions to
 example.tex.
