@@ -1,6 +1,6 @@
 %% cascadilla.cls
 %% Copyright 2008-2011 Max Bane
-%% Version 1.8
+%% Version 1.8.1
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -26,6 +26,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Changes:
+% Version 1.8.1: Fixed centering of author line by simplifying \blankline
+% command - thanks to Christopher Piñón.
 % Version 1.8: Added author's signature statement at the top of the first page,
 % and the "nosignature" option to suppress it.
 % Version 1.7.1: Added commented example of listing multiple
@@ -53,7 +55,7 @@
 % Identification
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cascadilla}[2011/07/20 v1.8 Class for Cascadilla Proceedings
+\ProvidesClass{cascadilla}[2011/11/12 v1.8.1 Class for Cascadilla Proceedings
 Project articles, by Max Bane]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
