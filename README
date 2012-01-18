@@ -5,7 +5,7 @@ Also included are an example document (example.tex and example.pdf), a BibTeX
 bibliography style (cascadilla.bst) and a BibTeX database used by the example
 document (exampleref.bib).
 
-This package was written by Max Bane, copyright 2008-2011, and is maintained by
+This package was written by Max Bane, copyright 2008-2012, and is maintained by
 the same. It is distributed under the conditions of the LaTeX Project Public
 License, a copy of which is included in LICENSE.txt; the license boilerplate is
 also included at the top of each source file.
@@ -32,7 +32,7 @@ TO USE:
 Simply place cascadilla.cls and cascadilla.bst in the same directory as the
 paper you are writing, and use "\documentclass{cascadilla}" instead of
 "\documentclass{article}". See the example paper (example.tex) for more details
-of usage.
+of usage, including optional arguments to the \documentclass command.
 
 To make cascadilla.cls and cascadilla.bst available for all of your papers,
 without having to put separate copies in the directory of each, consult your
@@ -40,6 +40,9 @@ LaTeX distribution's documentation to find out where to place them so that they
 are globally available. This is usually somewhere in your "texmf" tree.
 
 VERSION HISTORY
+
+Version 1.8.2 (Jan 17, 2012):
+    Made footnote marks flush with left edge of body text.
 
 Version 1.8.1 (Nov 12, 2011):
     Fixed centering of author line by simplifying \blankline command - thanks to

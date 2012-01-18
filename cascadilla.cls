@@ -1,6 +1,6 @@
 %% cascadilla.cls
-%% Copyright 2008-2011 Max Bane
-%% Version 1.8.1
+%% Copyright 2008-2012 Max Bane
+%% Version 1.8.2
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -22,10 +22,11 @@
 % Proceedings Project (http://www.lingref.com/cpp/authors/style.html), which
 % is used by a number of linguistics conference proceedings (e.g., WCCFL).
 % Suggestions, questions, and bug reports should be directed to Max Bane at
-% bane@uchicago.edu.
+% max.bane@gmail.com.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Changes:
+% Version 1.8.2: Made footnote marks flush with left edge of body text.
 % Version 1.8.1: Fixed centering of author line by simplifying \blankline
 % command - thanks to Christopher Piñón.
 % Version 1.8: Added author's signature statement at the top of the first page,
@@ -55,7 +56,7 @@
 % Identification
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cascadilla}[2011/11/12 v1.8.1 Class for Cascadilla Proceedings
+\ProvidesClass{cascadilla}[2012/01/17 v1.8.2 Class for Cascadilla Proceedings
 Project articles, by Max Bane]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -210,7 +211,6 @@ date:
   \settowidth{\@tempdima}{\@thefnmark} \parindent \dimexpr\@tempdima+.75em\relax%
   \noindent\makebox[1em][l]{\textsuperscript{\@thefnmark}}#1
 }
-
 
 % Disable page numbers. Suppressed by "pagenums" class option.
 \ifthenelse{\boolean{nopagenums}}{
