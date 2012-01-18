@@ -203,6 +203,15 @@ date:
 % Footnotes should be set in 9pt, which is \small
 \let\footnotesize\small
 
+% Adjust footnotes so that numbers appear flush with margin.
+% Implementation inspired by answers at:
+% http://tex.stackexchange.com/questions/40976/align-footnote-mark-with-text-margin
+\renewcommand{\@makefntext}[1]{%
+  \settowidth{\@tempdima}{\@thefnmark} \parindent \dimexpr\@tempdima+.75em\relax%
+  \noindent\makebox[1em][l]{\textsuperscript{\@thefnmark}}#1
+}
+
+
 % Disable page numbers. Suppressed by "pagenums" class option.
 \ifthenelse{\boolean{nopagenums}}{
     \pagestyle{empty}
