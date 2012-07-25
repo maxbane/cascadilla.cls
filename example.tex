@@ -22,6 +22,19 @@
 % (http://www.lingref.com/cpp/authors/style.html), which is used by 
 % a number of linguistics conference proceedings (e.g., WCCFL).
 
+% A note about fonts:
+% The Cascadilla stylesheet mandates the use of Times or Times New Roman. In at
+% least some TeX distributions (TeXLive being a known instance), compiling your
+% document with `pdftex' produces a PDF that uses a font called `NimbusRom',
+% which though extremely similar in appearance to Times, does not strictly
+% conform to the stylesheet. I therefore recommend compiling your document with
+% `latex', which produces a DVI file, and then converting that DVI file to a
+% PDF, using either:
+%   (i) `dvipdf', or 
+%   (ii) `dvips' followed by one of (a) `ps2pdf' or (b) `pstopdf'.
+% Either such method produces, in my experience, a PDF that references the
+% desired `Times-Roman' Type 1 font.
+
 % Declare "cascadilla" as the document class
 \documentclass{cascadilla}
 
@@ -71,7 +84,7 @@ unflagging and unconditional support over the years.}}
 
 % Then begin your document and write it as normal!
 % Do note, though, the special command for typsetting the bibliography (see
-% bottom of file).
+% bottom of file). Note also the use of the \immedsubsection command.
 % cascadilla.cls automatically includes the natbib package for you to use when
 % citing bibliographic references.
 \begin{document}
