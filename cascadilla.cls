@@ -63,6 +63,16 @@ Project articles, by Max Bane]
 % Class Options
 
 \RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+
+\ifpdf
+    \ClassWarningNoLine{cascadilla}
+    {`pdflatex' may produce a PDF file that does not use \MessageBreak
+     the Times Roman font, which is required by the \MessageBreak
+     Cascadilla stylesheet. You may wish to use `latex' \MessageBreak
+     to generate a DVI file instead, and convert that to \MessageBreak
+     PDF}
+\fi
 
 \newboolean{hyphenate}
 \newboolean{copyright}
