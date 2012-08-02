@@ -1,0 +1,12 @@
+*~
+.*.swp
+*.zip
+cascadilla*-*/
+*.tar*
+*.aux
+*.bbl
+*.log
+*.ps
+*.dvi
+*.fdb*
+*.blg
