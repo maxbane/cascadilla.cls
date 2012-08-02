@@ -3,7 +3,8 @@ typesetting documents that conform to the Cascadilla Proceedings Project
 stylesheet, used by various linguistics conference proceedings (such as WCCFL).
 Also included are an example document (example.tex and example.pdf), a BibTeX
 bibliography style (cascadilla.bst) and a BibTeX database used by the example
-document (exampleref.bib).
+document (exampleref.bib). The TeX source of the example document (example.tex)
+is heavily commented, and serves as a usage guide.
 
 This package was written by Max Bane, copyright 2008-2012, and is maintained by
 the same. It is distributed under the conditions of the LaTeX Project Public
