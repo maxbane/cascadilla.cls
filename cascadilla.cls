@@ -173,13 +173,17 @@ date:
             \fontsize{18}{18}
             \selectfont
             \textbf{\@title}\\
-            %\blankline
-            \vspace{18pt}
+            %\vspace{18pt}
+            \ifthenelse{\boolean{haveAuthor}}{
+                \fontsize{14pt}{16pt}
+                \selectfont
+                \blankline
+            }
             \normalsize
+            \selectfont
         }{}
     
         \ifthenelse{\boolean{haveAuthor}}{
-            \ifthenelse{\boolean{haveTitle}}{\blankline}{}
             \fontsize{14pt}{14pt}
             \selectfont
             \textbf{\@author}
@@ -188,6 +192,7 @@ date:
         }{}
     
         \ifthenelse{\boolean{haveInstitution}}{
+            \vspace{-0.5pt}
             \normalsize
             \selectfont
             \textbf{\@institution}
