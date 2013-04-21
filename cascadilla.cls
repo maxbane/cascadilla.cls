@@ -202,12 +202,10 @@ date:
     \end{center}
 }
 
-% The stylesheet (apparently) demands justified text *without* any
-% hyphenation (i.e., only word and letter spacing), even though this is
-% really ugly and violates every typographic convention, and ends up 
-% looking like a cheap MS Word document. The following parameter settings
-% discourage TeX's layout algorithm from breaking lines with syllabic hyphens.
-% Can be suppressed by the "hyphenate" class option.
+% The stylesheet demands justified text *without* any hyphenation (i.e., only
+% word and letter spacing). The following parameter settings discourage TeX's
+% layout algorithm from breaking lines with syllabic hyphens.  Can be suppressed
+% by the "hyphenate" class option.
 \ifthenelse{\boolean{hyphenate}}{}{
     \hyphenpenalty=5000
     \tolerance=1000
